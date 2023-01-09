@@ -13,7 +13,7 @@ Kubernetes v1.26, released last month, introduced an alpha feature that lets you
 
 先月リリースされたKubernetes v1.26では、ソースデータが異なる名前空間に属している場合でも、PersistentVolumeClaimにデータソースを指定できるアルファ機能が導入されました。  
 この新機能を有効にするには、新しいPersistentVolumeClaimの`dataSourceRef`フィールドに名前空間を指定します。Kubernetesがアクセスに問題がないことを確認すると、新しいPersistentVolumeはその他の名前空間で指定されたストレージソースからデータを投入することができます。  
-Kubernetes v1.26以前では、クラスタが `AnyVolumeDataSource` 機能を有効にしていれば、すでに **同じ** 名前空間内のデータソースから新しいボリュームをプロビジョニングすることができました。しかし、それは同じ名前空間内のデータソースに対してのみ機能するため、ユーザーは他の名前空間のデータソースから、ある名前空間にクレームを持つPersistentVolumeをプロビジョニングすることができませんでした。  
+Kubernetes v1.26より古いバージョンでは、クラスタが `AnyVolumeDataSource` 機能を有効にしていれば、すでに **同じ** 名前空間内のデータソースから新しいボリュームをプロビジョニングすることができました。しかし、それは同じ名前空間内のデータソースに対してのみ機能するため、ユーザーは他の名前空間のデータソースから、ある名前空間にクレームを持つPersistentVolumeをプロビジョニングすることができませんでした。  
 この問題を解決するために、Kubernetes v1.26では、PersistentVolumeClaimのAPIの`dataSourceRef`フィールドに新しい`namespace`フィールドをアルファ機能として追加しました。
 
 ## How it works
