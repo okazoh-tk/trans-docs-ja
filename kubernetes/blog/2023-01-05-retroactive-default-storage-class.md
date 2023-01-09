@@ -37,7 +37,7 @@ Let's take a closer look at each of them.
 ユーザは、作成時にデフォルトのStorageClassを**新しい**PVCに割り当てる同様の機能を既に知っているかもしれません。これは現在、[admission controller](/docs/reference/access-authn-authz/admission-controllers/#defaultstorageclass) によって処理されます。
 
 しかし、もしPVC作成時にデフォルトのStorageClassが定義されていなかったらどうでしょう？
-ユーザは、クラスが割り当てられないPVCで終わるでしょう。
+おそらくクラスが割り当てられないPVCで終わるでしょう。
 その結果、ストレージはプロビジョニングされず、PVCはこの時点でいくらか「スタック」することになります。
 一般的に、2つの主なシナリオが「スタック」したPVCをもたらし、後々問題を引き起こす可能性があります。
 それぞれについて詳しく見ていきましょう。
