@@ -1,3 +1,0 @@
-[submodule "kubernetes/website"]
-	path = kubernetes/website
-	url = https://github.com/kubernetes/website.git
